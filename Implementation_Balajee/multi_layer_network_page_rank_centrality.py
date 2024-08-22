@@ -46,14 +46,60 @@ print(localCentrality)
 while True:
     newLocalCentrality = numpy.dot(intraLayerMatrix, localCentrality)
     newLocalCentrality = rho * newLocalCentrality + ((1 - rho) * numpy.ones((numVertices,1)) / numVertices)
-    print("Current Local Centrality:")
+    # print("Current Local Centrality:")
     #normalise newLocalCentrality
     newLocalCentrality = newLocalCentrality / numpy.sum(newLocalCentrality)
-    print(newLocalCentrality)
+    # print(newLocalCentrality)
     if numpy.linalg.norm(newLocalCentrality - localCentrality) < epsilon:
         localCentrality = newLocalCentrality
         break
     localCentrality = newLocalCentrality
 
-print("Local Centrality:")
+
+
+
+#Now the global centrality uses something different, essentially global here is not really global, it is the centrality of a particular vertex with respect to every layer except it's own layer .
+
+# g = p
+# h
+# A + C
+# 
+# g + Cli
+# +
+# (1 − p)
+# N
+# ~1
+
+
+# g = p((A+C)g+Cl) + (1-p)/N * I 
+#where A is the intra layer matrix, C is the inter layer matrix, l is the local centrality vector, N is the number of vertices in the network and I is the vector of ones
+
+
+
+#Initialize the global centrality vector
+globalCentrality = numpy.ones((numVertices,1)) / numVertices
+print("Initial Global Centrality:")
+print(globalCentrality)
+
+while True:
+    newGlobalCentrality = numpy.dot(supraAdjacencyMatrix, globalCentrality) + numpy.dot(interLayerMatrix, localCentrality)
+    newGlobalCentrality = rho * newGlobalCentrality + ((1 - rho) * numpy.ones((numVertices,1)) / numVertices)
+    # print("Current Global Centrality:")
+    #normalise newGlobalCentrality
+    newGlobalCentrality = newGlobalCentrality / numpy.sum(newGlobalCentrality)
+    # print(newGlobalCentrality)
+    if numpy.linalg.norm(newGlobalCentrality - globalCentrality) < epsilon:
+        globalCentrality = newGlobalCentrality
+        break
+    globalCentrality = newGlobalCentrality
+
+print("Final Global Centrality:")
+print(globalCentrality)
+print("Final Local Centrality:")
 print(localCentrality)
+
+
+#We define versatility as local + global centrality
+versatility = localCentrality + globalCentrality
+print("Versatility:")
+print(versatility)
