@@ -1,0 +1,126 @@
+Enter number of vertices in each layer: Enter number of layers: Enter number of edges for layer 0: Enter number of edges for layer 1: Enter number of across-layer edges: Adding Across Layer Matrix   (0, 4)	3
+Modified SupraAdjacencyMatrix   (0, 1)	4
+  (0, 4)	3
+  (1, 2)	3
+  (3, 5)	7
+
+Intra Layer Matrix for the csr case   (0, 1)	4
+  (1, 2)	3
+  (3, 5)	7
+Enter the value of rho: Enter the value of epsilon: Initial Local Centrality:
+[[0.16666667]
+ [0.16666667]
+ [0.16666667]
+ [0.16666667]
+ [0.16666667]
+ [0.16666667]]
+Final Local Centrality:
+[[0.54265361]
+ [0.12160419]
+ [0.03119945]
+ [0.24214385]
+ [0.03119945]
+ [0.03119945]]
+Entering global centrality Computation for CSR case
+Local Centrality being used for this is  [[0.54265361]
+ [0.12160419]
+ [0.03119945]
+ [0.24214385]
+ [0.03119945]
+ [0.03119945]]
+Initial Global Centrality:
+[[0.16666667]
+ [0.16666667]
+ [0.16666667]
+ [0.16666667]
+ [0.16666667]
+ [0.16666667]]
+Are the updates happening? 
+After the update number  1
+[[0.41556868]
+ [0.17059076]
+ [0.00947726]
+ [0.38540876]
+ [0.00947726]
+ [0.00947726]]
+-----------------------------
+After the update number  2
+[[0.7751736 ]
+ [0.05377612]
+ [0.02734359]
+ [0.0890195 ]
+ [0.02734359]
+ [0.02734359]]
+-----------------------------
+After the update number  3
+[[0.4997922 ]
+ [0.13256867]
+ [0.03498734]
+ [0.2626771 ]
+ [0.03498734]
+ [0.03498734]]
+-----------------------------
+After the update number  4
+[[0.60409453]
+ [0.10705548]
+ [0.02343233]
+ [0.21855301]
+ [0.02343233]
+ [0.02343233]]
+-----------------------------
+After the update number  5
+[[0.61972493]
+ [0.09941932]
+ [0.02932639]
+ [0.19287657]
+ [0.02932639]
+ [0.02932639]]
+-----------------------------
+After the update number  6
+[[0.58024096]
+ [0.11190861]
+ [0.02803819]
+ [0.22373585]
+ [0.02803819]
+ [0.02803819]]
+-----------------------------
+After the update number  7
+[[0.60502607]
+ [0.1049033 ]
+ [0.02717776]
+ [0.20853736]
+ [0.02717776]
+ [0.02717776]]
+-----------------------------
+After the update number  8
+[[0.59842837]
+ [0.10637179]
+ [0.02819939]
+ [0.21060167]
+ [0.02819939]
+ [0.02819939]]
+-----------------------------
+Final Global Centrality:
+[[0.59842837]
+ [0.10637179]
+ [0.02819939]
+ [0.21060167]
+ [0.02819939]
+ [0.02819939]]
+Versatility:
+[[1.14108198]
+ [0.22797599]
+ [0.05939884]
+ [0.45274552]
+ [0.05939884]
+ [0.05939884]]
+Supra_Adjacenccy_inthecaseofcsr
+Supra-adjacency matrix in CSR format:
+  (0, 1)	4
+  (0, 4)	3
+  (1, 2)	3
+  (3, 5)	7
+Intra Layer Matrix for the csr case
+   (0, 1)	4
+  (1, 2)	3
+  (3, 5)	7
